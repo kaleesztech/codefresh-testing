@@ -19,6 +19,8 @@ steps:
     shell: sh
     commands:
       - |-
+        pwd
+        ls
         if [[ -f docker-compose.yaml ]]; then
           docker-compose up -d
         else
