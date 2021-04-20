@@ -14,14 +14,14 @@ steps:
   spinup_svc:
     title: spinning up all necessary svc
     stage: verify
-    image: pwbdod/docker-compose-aws-tf
+    image: zrpaplicacoes/docker-compose
     working_directory: ${{main_clone}}
     shell: sh
     commands:
       - |-
         sleep 15s
         if [[ -f docker-compose.yml ]]; then
-          docker run -itd -v /var/run/docker.sock:/var/run/docker.sock  docker/compose:1.23.0  -f docker-compose.yaml up -d
+          docker-compose up -d
         else
           echo -e "file is not present"
         fi
