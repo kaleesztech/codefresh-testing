@@ -14,7 +14,7 @@ steps:
   spinup_svc:
     title: spinning up all necessary svc
     stage: verify
-    image: tmaier/docker-compose
+    image: pwbdod/docker-compose-aws-tf
     working_directory: ${{main_clone}}
     shell: sh
     commands:
