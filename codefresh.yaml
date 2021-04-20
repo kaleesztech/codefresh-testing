@@ -1,0 +1,25 @@
+version: '1.0'
+stages:
+  - prepare
+  - verify
+  - build
+  - integration test
+steps:
+  main_clone:
+    title: Cloning main repository...
+    stage: prepare
+    type: git-clone
+    repo: 'kaleesztech/codefresh-testing'
+    revision: master
+  spinup_svc:
+    title: spinning up all necessary svc
+    stage: verify
+    working_directory: ./
+    shell: bash
+    commands:
+      - |-
+        if [[ -f docker-compose.yaml ]]; then
+          docker-compose up -d
+        else
+          echo -e "file is not present"
+        fi
