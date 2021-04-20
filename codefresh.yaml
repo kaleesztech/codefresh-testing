@@ -8,7 +8,6 @@ steps:
   main_clone:
     title: Cloning main repository...
     stage: prepare
-    image: docker
     type: git-clone
     repo: 'kaleesztech/codefresh-testing'
     revision: master
