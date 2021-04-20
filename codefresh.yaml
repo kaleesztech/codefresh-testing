@@ -10,7 +10,7 @@ steps:
     stage: prepare
     type: git-clone
     repo: 'kaleesztech/codefresh-testing'
-    revision: master
+    revision: main
   spinup_svc:
     title: spinning up all necessary svc
     stage: verify
