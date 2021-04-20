@@ -8,12 +8,14 @@ steps:
   main_clone:
     title: Cloning main repository...
     stage: prepare
+    image: docker
     type: git-clone
     repo: 'kaleesztech/codefresh-testing'
     revision: master
   spinup_svc:
     title: spinning up all necessary svc
     stage: verify
+    image: docker
     working_directory: ./
     shell: bash
     commands:
