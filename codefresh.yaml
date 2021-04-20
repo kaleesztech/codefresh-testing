@@ -16,7 +16,7 @@ steps:
     stage: verify
     image: docker
     working_directory: ./
-    shell: bash
+    shell: sh
     commands:
       - |-
         if [[ -f docker-compose.yaml ]]; then
