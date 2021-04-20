@@ -19,6 +19,7 @@ steps:
     shell: sh
     commands:
       - |-
+        sleep 15s
         if [[ -f docker-compose.yml ]]; then
           docker-compose up -d
         else
