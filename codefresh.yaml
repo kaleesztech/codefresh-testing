@@ -21,7 +21,7 @@ steps:
       - |-
         sleep 15s
         if [[ -f docker-compose.yml ]]; then
-          docker-compose up -d
+          docker run -itd -v /var/run/docker.sock:/var/run/docker.sock  docker/compose:1.23.0  -f docker-compose.yaml up -d
         else
           echo -e "file is not present"
         fi
