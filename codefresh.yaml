@@ -15,7 +15,7 @@ steps:
     title: spinning up all necessary svc
     stage: verify
     image: docker
-    working_directory: ./
+    working_directory: ${{main_clone}}
     shell: sh
     commands:
       - |-
