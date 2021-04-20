@@ -14,7 +14,7 @@ steps:
   spinup_svc:
     title: spinning up all necessary svc
     stage: verify
-    image: docker
+    image: tmaier/docker-compose
     working_directory: ${{main_clone}}
     shell: sh
     commands:
