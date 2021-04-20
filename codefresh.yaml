@@ -21,7 +21,7 @@ steps:
       - |-
         pwd
         ls
-        if [[ -f docker-compose.yaml ]]; then
+        if [[ -f docker-compose.yml ]]; then
           docker-compose up -d
         else
           echo -e "file is not present"
